@@ -216,7 +216,7 @@ export default function Home() {
 </div>
               <p className="parent-details">
 
-    Thekkenattufil (H), Thuravoor P.O, Cherthala
+    Thekkemattathil (H), Thuravoor P.O, Cherthala
   </p>
           <p className="amp">&</p>
           <h2 className="names">Muhammed Sajjad</h2>
@@ -238,6 +238,8 @@ export default function Home() {
           
 
           <div className="divider"></div>
+           <h3 className="names1">INSHA ALLAH</h3>
+           <div className="divider"></div>
 
           <div className="details royal-details">
 

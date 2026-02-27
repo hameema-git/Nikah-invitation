@@ -123,6 +123,13 @@ body {
   font-size: 28px;
   margin: 10px 0;
 }
+.names1 {
+  font-size: 28px;
+  margin: 10px 0;
+   font-family: 'Cinzel', serif;
+    color: #6d3b00;
+}
+
 
 .amp {
   color: #c08a3e;
