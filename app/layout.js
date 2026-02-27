@@ -4,10 +4,29 @@ import { Playfair_Display } from 'next/font/google'
 
 const playfair = Playfair_Display({ subsets: ['latin'] })
 
+
 export const metadata = {
-  title: "Nikah | Fathima & Sajjad",
-  description: "Premium Luxury Nikah Invitation",
-}
+  title: "Nikah Invitation | Fathima Nasrine & Muhammed Sajjad",
+  description:
+    "You are cordially invited to the Nikah ceremony of Fathima Nasrine & Muhammed Sajjad on 12 April 2026.",
+
+  openGraph: {
+    title: "Nikah Invitation | Fathima Nasrine & Muhammed Sajjad",
+    description:
+      "Join us for the blessed Nikah ceremony on 12 April 2026.",
+    url: "https://nikah-invitation-eight.vercel.app",
+    siteName: "Nikah Invitation",
+    images: [
+      {
+        url: "/images/og-image.png", // IMPORTANT
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+};
 
 
 export default function RootLayout({ children }) {
