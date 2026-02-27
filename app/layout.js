@@ -15,24 +15,29 @@ export const metadata = {
     url: "https://nikah-invitation-eight.vercel.app",
     images: [
       {
-        url: "https://nikah-invitation-eight.vercel.app/images/og-image.png", // ✅ MATCH YOUR REAL FILE
+        url: "https://nikah-invitation-eight.vercel.app/images/og-image.png?v=2",
         width: 1200,
         height: 630,
       },
     ],
     type: "website",
   },
-}
 
+  twitter: {
+    card: "summary_large_image",
+    title: "Nikah Invitation | Fathima Nasrine & Muhammed Sajjad",
+    description:
+      "Join us for the blessed Nikah ceremony on 12 April 2026.",
+    images: [
+      "https://nikah-invitation-eight.vercel.app/images/og-image.png?v=2",
+    ],
+  },
+}
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <meta
-  property="og:image"
-  content="https://nikah-invitation-eight.vercel.app/images/og-image.png?v=1"
-/>
         <link
           href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Great+Vibes&display=swap"
           rel="stylesheet"
