@@ -24,10 +24,15 @@ export const metadata = {
   },
 }
 
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <meta
+  property="og:image"
+  content="https://nikah-invitation-eight.vercel.app/images/og-image.png?v=1"
+/>
         <link
           href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Great+Vibes&display=swap"
           rel="stylesheet"
