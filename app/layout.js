@@ -13,14 +13,14 @@ export const metadata = {
     description:
       "Join us for the blessed Nikah ceremony on 12 April 2026.",
     url: "https://nikah-invitation-eight.vercel.app",
+    type: "website",
     images: [
       {
-        url: "https://nikah-invitation-eight.vercel.app/images/og-image.png?v=2",
+        url: "https://nikah-invitation-eight.vercel.app/images/og-image.jpg",
         width: 1200,
         height: 630,
       },
     ],
-    type: "website",
   },
 
   twitter: {
@@ -29,7 +29,7 @@ export const metadata = {
     description:
       "Join us for the blessed Nikah ceremony on 12 April 2026.",
     images: [
-      "https://nikah-invitation-eight.vercel.app/images/og-image.png?v=2",
+      "https://nikah-invitation-eight.vercel.app/images/og-image.jpg",
     ],
   },
 }
