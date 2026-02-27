@@ -1,10 +1,16 @@
 import './globals.css'
 import { Playfair_Display } from 'next/font/google'
 
-const playfair = Playfair_Display({ subsets: ['latin'] })
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata = {
+  metadataBase: new URL('https://nikah-invitation-eight.vercel.app'),
+
   title: "Nikah Invitation | Fathima Nasrine & Muhammed Sajjad",
+
   description:
     "You are cordially invited to the Nikah ceremony of Fathima Nasrine & Muhammed Sajjad on 12 April 2026.",
 
@@ -13,12 +19,14 @@ export const metadata = {
     description:
       "Join us for the blessed Nikah ceremony on 12 April 2026.",
     url: "https://nikah-invitation-eight.vercel.app",
+    siteName: "Nikah Invitation",
     type: "website",
     images: [
       {
-        url: "https://nikah-invitation-eight.vercel.app/images/og-image.jpg",
+        url: "/images/og-image.jpg",   // ✅ relative path (cleaner)
         width: 1200,
         height: 630,
+        alt: "Nikah Invitation - Fathima Nasrine & Muhammed Sajjad",
       },
     ],
   },
@@ -28,9 +36,7 @@ export const metadata = {
     title: "Nikah Invitation | Fathima Nasrine & Muhammed Sajjad",
     description:
       "Join us for the blessed Nikah ceremony on 12 April 2026.",
-    images: [
-      "https://nikah-invitation-eight.vercel.app/images/og-image.jpg",
-    ],
+    images: ["/images/og-image.jpg"],   // ✅ same image
   },
 }
 
@@ -43,7 +49,9 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body className={playfair.className}>{children}</body>
+      <body className={playfair.className}>
+        {children}
+      </body>
     </html>
   )
 }
