@@ -1,0 +1,941 @@
+@import "tailwindcss";
+
+@media (max-width: 768px) {
+  .invite-card {
+    width: 100%;
+    max-width: 95%;
+    padding: 40px 25px;
+  }
+}
+
+/* Vibrant animated gradient */
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #ffdde1, #f8cdda, #ffd6a5);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+   overflow-x: hidden;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Center wrapper */
+/* .page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+} */
+ .page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow-x: hidden;
+  padding: 20px; /* important for mobile */
+}
+.invite-card {
+  margin: 0 auto;   /* force horizontal center */
+}
+
+/* Glow blobs */
+.blob {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.blob1 {
+  background: #ff9a9e;
+  top: -100px;
+  left: -100px;
+}
+
+.blob2 {
+  background: #fad0c4;
+  bottom: -100px;
+  right: -100px;
+}
+
+/* Card */
+/* .invite-card {
+  background: white;
+  border-radius: 40px;
+  padding: 60px 50px;
+  max-width: 750px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.15);
+  animation: fadeUp 1.5s ease forwards;
+  position: relative;
+} */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Floral corners */
+.flower-top-left {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 120px;
+  opacity: 0.4;
+}
+
+.flower-bottom-right {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  width: 120px;
+  opacity: 0.4;
+  transform: rotate(180deg);
+}
+
+/* Gold shimmer title */
+.title {
+  font-size: 42px;
+  background: linear-gradient(90deg,#c08a3e,#f5d37a,#c08a3e);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  to { background-position: 200% center; }
+}
+
+.names {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.amp {
+  color: #c08a3e;
+  font-size: 24px;
+}
+
+.divider {
+  width: 120px;
+  height: 2px;
+  margin: 30px auto;
+  background: linear-gradient(to right, transparent,#c08a3e,transparent);
+}
+
+.details {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Location button */
+.location-btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #c08a3e;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.location-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Arabic text */
+
+.arabic-bottom {
+  color: #c08a3e;
+  margin: 100px 0;
+  font-size: 20px;
+   text-align: center;
+}
+
+/* Petals */
+@keyframes petalFall {
+  0% { transform: translateY(-10vh); opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: translateY(110vh); opacity: 0; }
+}
+
+.petal {
+  position: fixed;
+  width: 22px;
+  pointer-events: none;
+  animation: petalFall linear infinite;
+  z-index: 0;
+}
+
+/* Envelope */
+.envelope-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+/* Envelope Wrapper */
+.lux-envelope-wrapper {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #fbd3e9, #fcd6a4, #ffe5ec, #ffd6a5);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  z-index: 10;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+/* Envelope */
+/* .lux-envelope {
+  position: relative;
+  width: 340px;
+  height: 220px;
+  cursor: pointer;
+  perspective: 1000px;
+  text-align: center;
+} */
+
+/* Body */
+/* .lux-body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, #d4a373, #c08a3e);
+  border-radius: 15px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+} */
+ .lux-body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, #d4a373, #c08a3e);
+  border-radius: 15px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.lux-body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.4),
+    transparent
+  );
+  transform: skewX(-20deg);
+  animation: shimmer 4s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 150%; }
+}
+
+/* Flap */
+.lux-flap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, #c08a3e, #b7791f);
+  border-radius: 15px;
+  transform-origin: top;
+  transition: transform 1s ease;
+  z-index: 2;
+}
+
+/* .lux-envelope:hover .lux-flap {
+  transform: rotateX(-160deg);
+} */
+
+
+/* Tap Text */
+.tap-text {
+  margin-top: 25px;
+  font-size: 16px;
+  color: #5a3e36;
+  animation: pulseText 2s infinite;
+}
+
+@keyframes pulseText {
+  0% { opacity: 0.4; }
+  50% { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+.flap {
+  height: 100%;
+  background: #a86c2f;
+  transition: transform 1s ease;
+}
+
+
+.seal-inner {
+  color: gold;
+  font-weight: bold;
+  font-size: 26px;
+  font-family: serif;
+}
+.fade-out {
+  animation: fadeScale 0.8s forwards;
+}
+
+@keyframes fadeScale {
+  to {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+.glow-orb {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255,192,203,0.4), transparent);
+  border-radius: 50%;
+  animation: floatOrb 12s infinite ease-in-out;
+}
+
+.glow-orb:nth-child(1) { top: 10%; left: 20%; }
+.glow-orb:nth-child(2) { bottom: 15%; right: 25%; }
+.glow-orb:nth-child(3) { top: 30%; right: 10%; }
+
+@keyframes floatOrb {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-30px); }
+  100% { transform: translateY(0px); }
+}
+/* .envelope-text {
+  position: absolute;
+  width: 100%;
+  top: 30%;
+  text-align: center;
+  color: white;
+  z-index: 3;
+  font-family: 'Playfair Display', serif;
+}
+
+.envelope-text h2 {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.envelope-text .and {
+  margin: 4px 0;
+  font-size: 18px;
+  color: #ffe8b0;
+}
+
+.nikah-date {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #fff3c4;
+} */
+/* @keyframes fallRose {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 0;
+  }
+  20% { opacity: 1; }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+} */
+ @keyframes fallRose {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(50vh) translateX(20px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(110vh) translateX(-20px) rotate(360deg);
+    opacity: 0;
+  }
+}
+.rose {
+  position: fixed;
+  top: -50px;
+  width: 18px;
+  height: 18px;
+  background: radial-gradient(circle, #ff4d6d, #c9184a);
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(45deg);
+  animation: fallRose linear infinite;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* .rose {
+  position: absolute;
+  top: -50px;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, #ff4d6d, #c9184a);
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(45deg);
+  animation: fallRose 4s linear infinite;
+  opacity: 0.7;
+} */
+.crescent-moon {
+  position: absolute;
+  top: 10%;
+  right: 12%;
+  width: 60px;
+  height: 60px;
+  background: gold;
+  border-radius: 50%;
+  box-shadow: -15px 0 0 0 #fbd3e9;
+  opacity: 0.8;
+}
+@keyframes twinkle {
+  0%,100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.4); }
+}
+
+.twinkle {
+  position: absolute;
+  color: #ffd700;
+  font-size: 14px;
+  animation: twinkle 3s infinite;
+}
+/* .lux-envelope {
+  position: relative;
+  width: 480px;
+  height: 340px;
+  cursor: pointer;
+  text-align: center;
+  z-index: 5;
+} */
+
+/* Envelope Body */
+/* .lux-body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, #d4a373, #c08a3e);
+  border-radius: 18px;
+  box-shadow: 0 25px 70px rgba(0,0,0,0.3);
+} */
+
+/* Envelope Content */
+.envelope-content {
+  position: absolute;
+  top: 68%;
+  transform: translateY(-50%);
+  width: 100%;
+  color: #4b2e15;
+  z-index: 3;
+  text-align: center;
+    line-height:.8;   
+}
+/* .arabic-calligraphy {
+  font-size: 20px;
+  margin-top: -50px;
+  margin-bottom: 14px;
+  letter-spacing: 2px;
+  font-weight: 500; */
+  /* background: linear-gradient(90deg, #f8e7a1, #e2e1d8, #f8e7a1); */
+  /* color: #c08a3e;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
+.arabic-calligraphy {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  color: #fff4c4;
+}
+/* ===========================
+   ROYAL DETAILS STYLE
+=========================== */
+
+.royal-details {
+  margin-top: 20px;
+}
+
+.detail-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 12px 0;
+  font-size: 16px;
+  color: #4b2e15;
+}
+
+.royal-icon {
+  color: #b8860b;
+  stroke-width: 1.8;
+}
+
+/* Subtle hover glow */
+
+.detail-row:hover .royal-icon {
+  color: #d4af37;
+  transform: scale(1.1);
+  transition: 0.3s ease;
+}
+.footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.footer-text {
+  font-size: 16px;
+  color: #6d3b00;
+  font-weight: 500;
+}
+
+.royal-icon {
+  color: #b8860b;
+  stroke-width: 1.8;
+}
+
+
+
+.seal-inner {
+  color: gold;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+/* Tap Text */
+.tap-text {
+  position: absolute;
+  bottom: -40px;
+  width: 100%;
+  font-size: 15px;
+  color: #5a3e36;
+  animation: pulseText 2s infinite;
+}
+/* ------------------------------
+   ENVELOPE
+--------------------------------*/
+
+/* .lux-envelope {
+  position: relative;
+  width: 420px;
+  height: 360px;
+  cursor: pointer;
+  text-align: center;
+  z-index: 5;
+} */
+
+/* Arabic Top */
+
+
+/* Envelope Body */
+
+.lux-body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, #d4a373, #c08a3e);
+  border-radius: 6px; /* sharper edge */
+  box-shadow: 0 35px 90px rgba(0,0,0,0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Triangular Flap */
+
+.lux-flap {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 130px;
+  background: linear-gradient(145deg, #b7791f, #a86c2f);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transform-origin: top;
+  transition: transform 1s ease;
+  z-index: 2;
+}
+
+/* .lux-envelope:hover .lux-flap {
+  transform: rotateX(-160deg);
+} */
+
+/* Content */
+
+
+
+/* .invite-type {
+  font-size: 18px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #fff6d5;
+  margin-bottom: 10px;
+} */
+
+
+
+
+/* Premium Wax Seal */
+
+
+
+.seal-img {
+  width: 40px;
+  opacity: 0.9;
+}
+
+/* Tap Text */
+
+.tap-text {
+  position: absolute;
+  bottom: -45px;
+  width: 100%;
+  font-size: 15px;
+  color: #5a3e36;
+  animation: pulseText 2s infinite;
+}
+/* -------------------------
+   ENVELOPE BASE
+--------------------------*/
+
+.lux-envelope {
+  position: relative;
+  width: 330px;
+  height: 230px;
+  cursor: pointer;
+  text-align: center;
+  z-index: 5;
+}
+
+/* Arabic Top */
+
+/* .arabic-top {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 100%;
+  text-align: center;
+  color: #c08a3e;
+  font-size: 30px;
+  letter-spacing: 2px;
+  font-weight: bolder;
+} */
+ .arabic-top {
+  text-align: center;
+  font-size: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+  color: #b8860b;
+}
+
+/* Body */
+
+.lux-body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(160deg, #d4a373, #b7791f);
+  border-radius: 6px;
+  box-shadow:
+    0 40px 100px rgba(0,0,0,0.35),
+    inset 0 1px 0 rgba(255,255,255,0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shine effect */
+
+.shine-layer {
+  position: absolute;
+  right: -40%;
+  top: -20%;
+  width: 80%;
+  height: 150%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.25),
+    transparent
+  );
+  transform: rotate(20deg);
+}
+
+/* Flap */
+
+.lux-flap {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 140px;
+  background: linear-gradient(160deg, #b7791f, #8c5a1f);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transform-origin: top;
+  transition: transform 1s ease;
+  box-shadow: inset 0 -5px 15px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+.lux-envelope:hover .lux-flap {
+  transform: rotateX(-165deg);
+}
+
+/* Content */
+
+
+
+/* .bride,
+.groom {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin: 4px 0;
+} */
+
+/* .and-symbol {
+  margin: 2px 0;
+  font-size: 18px;
+  color: #ffe8b0;
+} */
+
+/* .nikah-date {
+  margin-top: 4px;
+  font-size: 15px;
+  color: #fff6d5;
+  letter-spacing: 1px;
+  margin: 2px 0;
+} */
+
+/* Premium Wax Seal */
+
+.lux-seal {
+  position: absolute;
+  bottom: 108px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+ 
+  box-shadow:
+    0 15px 35px rgba(0,0,0,0.5),
+    inset 0 3px 5px rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+}
+
+/* Seal Ring */
+
+.seal-ring {
+  position: absolute;
+  width: 20px;
+  height: 60px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+}
+
+/* Arabic Initial */
+
+.seal-symbol {
+  color: gold;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Tap Text */
+
+.tap-text {
+  position: absolute;
+  bottom: -50px;
+  width: 100%;
+  font-size: 15px;
+  color: #5a3e36;
+  animation: pulseText 2s infinite;
+}
+.envelope-content {
+  position: absolute;
+  top: 56%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  line-height: 1.25;
+  color: #2b1a0f;
+}
+
+/* Nikah Title */
+.invite-type {
+  /* font-family: 'Cinzel', serif; */
+  font-family: 'Great Vibes',cursive;
+  font-size: 38px;
+  font-weight: bolder;
+  letter-spacing: 4px;
+  color: #760a0a;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  margin-bottom: 8px;
+}
+
+/* Bride & Groom */
+.bride,
+.groom {
+  
+   /* font-family: 'Great Vibes',; */
+   font-family: 'Cinzel', serif;
+  font-size: 20px;
+  font-weight: bolder;
+  margin: 4px 0;
+  color: #2b1a0f;
+}
+
+/* & Symbol */
+.and-symbol {
+  font-family: 'Great Vibes', cursive;
+  font-size: 28px;
+  margin: 2px 0;
+  color: #fff2c2;
+}
+
+/* Date */
+.nikah-date,
+.hijri-date {
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  color: #760a0a;
+  letter-spacing: 1px;
+  font-weight:bold
+}
+/* ===========================
+   SECOND PAGE BACKGROUND
+=========================== */
+
+.invite-card {
+  position: relative;
+  background: linear-gradient(145deg, #fffaf0, #f8e7c4);
+  border-radius: 25px;
+  padding: 60px 50px;
+  max-width: 800px;
+  width: 90%;
+  text-align: center;
+  box-shadow:
+    0 40px 120px rgba(0,0,0,0.25),
+    inset 0 0 0 1px rgba(255,215,0,0.2);
+  animation: fadeUp 1.5s ease forwards;
+  backdrop-filter: blur(8px);
+}
+
+/* Spotlight Effect */
+
+.invite-card::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,215,0,0.15), transparent 70%);
+  z-index: 0;
+}
+
+/* Elegant Title */
+
+.title {
+  font-family: 'Cinzel', serif;
+  font-size: 42px;
+  background: linear-gradient(90deg,#b8860b,#ffd700,#b8860b);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+}
+
+/* Names Luxury */
+
+.names {
+  font-family: 'Great Vibes', cursive;
+  font-size: 40px;
+  color: #6d3b00;
+  margin: 10px 0;
+}
+
+/* Divider Gold */
+
+.divider {
+  width: 120px;
+  height: 2px;
+  margin: 25px auto;
+  background: linear-gradient(to right, transparent,#d4af37,transparent);
+}
+
+/* Gold Dust */
+
+.gold-dust {
+  position: fixed;
+  top: -10px;
+  width: 3px;
+  height: 3px;
+  background: gold;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: dustFall 15s linear infinite;
+}
+
+@keyframes dustFall {
+  to { transform: translateY(120vh); }
+}
+
+/* Slower Roses on Main Page */
+
+.main-rose {
+  opacity: 0.7;
+}
+.monogram-bg {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Cinzel', serif;
+  font-size: 120px;
+  font-weight: 600;
+  color: rgba(71, 65, 65, 0.08);
+  pointer-events: none;
+  letter-spacing: 10px;
+  z-index: 0;
+}
+.couple-icon {
+  margin-top: 8px;
+  font-size: 22px;
+  color: #b8860b;
+}
+
+.seal-heart {
+  margin-top: 8px;
+  color: #a10b0b;
+}
